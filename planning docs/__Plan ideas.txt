@@ -1,0 +1,20 @@
+Text-based RPG
+
+3 class : harcos, mage, valami ranged
+
+3 helyszín: Falu, erdő, dungeon
+Falu: bolt, heal, safety
+Erdő: Looting, Combat
+Dungeon: looting, Combat, Bossfight
+
+Combat rendszer???
+
+equipment: 
+támad, véd
+hp bonus? egyéb stat++??
+
+ruha vs eszköz?
+
+inventory???
+
+save/load?

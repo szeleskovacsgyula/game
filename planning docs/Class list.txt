@@ -1,0 +1,11 @@
+Parent:
+Equipment: name, value, pcs
+Alive: name, lvl, hp
+
+Child:
+DefEquipment: armor
+AtkEquipment: bonusAtk
+Consumable: hp, mana
+CanDoDmg: dmg, armor
+ Enemy: loot?,
+ Player: items, location, mana ??
