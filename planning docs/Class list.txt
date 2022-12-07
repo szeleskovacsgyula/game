@@ -9,3 +9,7 @@ Consumable: hp, mana
 CanDoDmg: dmg, armor
  Enemy: loot?,
  Player: items, location, mana ??
+
+
+
+itt egy módosítás
