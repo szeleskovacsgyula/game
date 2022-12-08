@@ -1,10 +1,7 @@
 import random
 
-min = 1
-max = 5
 
-
-def calcDmg():
+def calcDmg(min, max):
     return random.randint(min, max)
 
 
@@ -13,6 +10,7 @@ class Alive:
         self.name = name
         self.lvl = lvl
         
+        
     def __str__(self):
         return f"{self.name}(lvl{self.lvl})"
 
@@ -20,7 +18,7 @@ class Player(Alive) :
     def __init__(self, name, clas):
         self.name = name
         self.clas = clas
-        self.damage = calcDmg()
+    damage = calcDmg(1,5)
     lvl = 1
     xp = 0
     maxHP = 0
@@ -39,10 +37,10 @@ class Player(Alive) :
 
 
 class Enemy(Alive):
-    def __init__(self, name, lvl,):
+    def __init__(self, name, lvl, hp, damage, armor):
         self.name = name
         self.lvl = lvl
-        hp = 0
-        damage = 0
-        armor = 0
+        self.hp = hp
+        self.damage = damage
+        self.armor = armor
 

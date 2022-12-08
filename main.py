@@ -6,21 +6,18 @@ import create_stuff
 #global use    
 
 #tesztek
-#player = characters.Player("Sanyi", "Warrior")
-
-#
-#player.equipment.append(create_stuff.shield)
-#player.equipment.append(sword)
-#player.info()
-#print(player.damage)
-#print(player.clas.name)
-#print(player.equipment[0].name)
-#print(create_stuff.armor)
-
 player = characters.Player("Sanyi", "Warrior")
-#player.clas = classes.Warrior
 create_stuff.addClass(player)
-print(player.clas.name, "\n", player.currentHP)
+#enemy = characters.Enemy(name, lvl, hp, damage, armor)
+
+
+print(player)
+#player.clas = classes.Warrior
+
+print("Player Class: ",player.clas.name, "\nPlayer Current HP: ", player.currentHP)
+
+create_stuff.Fight(player, player)
+
 
 
 
