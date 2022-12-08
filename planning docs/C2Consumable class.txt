@@ -1,0 +1,3 @@
+Equipmentből jön
+kiegészíti a lehetséges bonuszokkal
+hp, mana

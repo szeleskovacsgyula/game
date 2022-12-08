@@ -1,0 +1,8 @@
+player tulajdonságai legyenek benne, kiegészíti az Aliveot, később átírni a CAnDoDmg kiegészítésére?
+
+dmg, armor, maxHp, currentHp, maxmana, mana, itemek, tartózkodási hely, felszerelés
+
+itemek, felszerelés --> tömbök
+felszerelés amit visel, item pedig minden. benne jelölni a felszerelést?
+ string átírás
+ 

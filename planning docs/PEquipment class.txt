@@ -1,0 +1,7 @@
+felszerelések: név, ár
+
+UsableEquipment:
+Equipment gyereke 
+kiegészíti: equipped boolean-nal
+darabszám? kell?
+

@@ -1,0 +1,2 @@
+bonus attack damage kiegészíti a UsableEquipment-et
+
