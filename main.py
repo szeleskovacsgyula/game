@@ -4,23 +4,17 @@ import equipment
 import classes
 import create_stuff
 #global use    
-
-#tesztek
-player = characters.Player("Sanyi", "Warrior")
+player = characters.Player("Sanyi")
+enemy = characters.Enemy("Goblin", 1, 100, 5, 3)
+player.clas = input("Class: ").upper()
 create_stuff.addClass(player)
-#enemy = characters.Enemy(name, lvl, hp, damage, armor)
-
-
+#tesztek
 print(player)
+#data test
+
+print(player.damage)
 #player.clas = classes.Warrior
+#print("Player Class: ",player.clas.name, "\nPlayer Current HP: ", player.currentHP)
 
-print("Player Class: ",player.clas.name, "\nPlayer Current HP: ", player.currentHP)
-
-create_stuff.Fight(player, player)
-
-
-
-
-
-
-
+#fight test I
+create_stuff.Fight(player, enemy)
