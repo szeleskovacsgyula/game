@@ -6,18 +6,18 @@ def calcDmg(min, max):
 
 
 class Alive:
-    def __init__(self, name, lvl,):
+    def __init__(self, name, lvl):
         self.name = name
         self.lvl = lvl
         
         
     def __str__(self):
-        return f"{self.name}(lvl{self.lvl})"
+        return f"{self.name} (lvl{self.lvl})"
 
 class Player(Alive) :
-    def __init__(self, name, clas):
+    def __init__(self, name):
         self.name = name
-        self.clas = clas
+    clas = ""
     damage = calcDmg(1,5)
     lvl = 1
     xp = 0
@@ -37,10 +37,11 @@ class Player(Alive) :
 
 
 class Enemy(Alive):
-    def __init__(self, name, lvl, hp, damage, armor):
+    def __init__(self, name, lvl, currentHP, damage, armor):
         self.name = name
         self.lvl = lvl
-        self.hp = hp
+        self.currentHP = currentHP
         self.damage = damage
         self.armor = armor
+    itemdrop = []
 
