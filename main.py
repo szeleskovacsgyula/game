@@ -5,7 +5,7 @@ import classes
 import create_stuff
 #global use    
 player = characters.Player("Sanyi")
-enemy = characters.Enemy("Goblin", 1, 100, 5, 3)
+enemy = characters.Enemy("Goblin", 1, 100, 5, 2)
 player.clas = input("Class: ").upper()
 create_stuff.addClass(player)
 #tesztek
@@ -15,6 +15,6 @@ print(player)
 print(player.damage)
 #player.clas = classes.Warrior
 #print("Player Class: ",player.clas.name, "\nPlayer Current HP: ", player.currentHP)
-
+player.info()
 #fight test I
 create_stuff.Fight(player, enemy)

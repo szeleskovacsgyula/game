@@ -7,7 +7,7 @@ class Base:
 class Warrior(Base): 
     name = "Warrior"
     bonusAtk = 10
-    bonusArmor = 15
+    bonusArmor = 5
     bonusHp = 50
 
 class Mage: 

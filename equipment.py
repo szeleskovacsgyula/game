@@ -1,5 +1,6 @@
 class Equipment:
-    def __init__(self, name, price):
+    def __init__(index, self, name, price):
+        self.index = index
         self.name = name
         self.price = price
         pcs = 0

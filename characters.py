@@ -18,7 +18,7 @@ class Player(Alive) :
     def __init__(self, name):
         self.name = name
     clas = ""
-    damage = calcDmg(1,5)
+    damage = 0
     lvl = 1
     xp = 0
     maxHP = 0
@@ -29,10 +29,12 @@ class Player(Alive) :
     armor = 0
     items = []
     location = ""
-    equipment=[] #max 5, max 1 atk
+    equipment=[] #max 5, max 1 atk <-- erre kitalálni valamit!!!
+    #távolság később, ha a mage és archer bekerül
 
     def info(self):
-        print("Name:" ,self.name,"Class: ", self.clas, "\nLevel: ", self.lvl, "HP: ", self.currentHP)
+        print("Name:" ,self.name,"\nClass: ", self.clas,
+         "\nLevel: ", self.lvl, "\nHP: ", self.currentHP, "\nDamage: ", self.damage)
 
 
 
