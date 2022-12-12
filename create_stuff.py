@@ -4,11 +4,13 @@ import equipment
 import classes
 import characters
 import time
+import json
 
 #equipment -- átírni tömbbe, index alapján vissza?
-shield = equipment.DefEquipment("Shield", 200, 10)
-armor = equipment.DefEquipment("Armor", 100, 20)
-sword = equipment.AtkEquipment("Sword", 100, 10)
+shield = equipment.DefEquipment("Shield", 10)
+armor = equipment.DefEquipment("Armor", 20)
+sword = equipment.AtkEquipment("Sword", 10)
+nowsword = equipment.AtkEquipment("notSword", 10)
 warrior = classes.Warrior()
 mage = classes.Mage()
 archer = classes.Archer()
@@ -20,6 +22,31 @@ d = {
     "price" : 100,
     "damage" : 10
 }
+
+#with open('testjson.json', 'r') as f:
+#    data=json.load(f)
+#print(data)
+
+input_file = open ('testjson.json')
+json_array = json.load(input_file)
+weapon_list = []
+
+for item in json_array:
+    weapon_details = {"name":"", "atkDmg":0}
+    weapon_details["name"] = item["name"]
+    weapon_details['atkDmg'] = item['atkDmg']
+    weapon_list.append(weapon_details)
+
+newweapon = weapon_list[0]
+fasszzasfkafn = equipment.AtkEquipment(**newweapon)
+#print(newweapon)
+print(fasszzasfkafn)
+print(fasszzasfkafn.name)
+
+#testlistW = []
+#testlistW.append(nowsword)
+#print(testlistW[0].name)
+#testlistW.append(newweapon)
 
 #class a playernek----------------------------------------------------------------------------------------------------
 def addClass(player):
@@ -75,9 +102,10 @@ def dealDamage(hitter, getter):
     print(getter.name, " új élete: ", getter.currentHP)
     time.sleep(1)
 
-def calculateDamage(damageDealer) :
+def calculateDamage(damageDealer) : #beilleszteni a deal damage-be ha meglesz a fegyver equip
     print("class+weapon damage")
 
 
 #--------------------------------------------------------------------------------------------------------------------
 #Equipment -- fájlból beolvasás tömbbe
+#json v jegyzettömb?

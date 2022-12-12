@@ -3,6 +3,8 @@ import random
 import equipment
 import classes
 import create_stuff
+
+
 #global use    
 player = characters.Player("Sanyi")
 enemy = characters.Enemy("Goblin", 1, 100, 5, 2)
@@ -17,4 +19,11 @@ print(player.damage)
 #print("Player Class: ",player.clas.name, "\nPlayer Current HP: ", player.currentHP)
 player.info()
 #fight test I
-create_stuff.Fight(player, enemy)
+#create_stuff.Fight(player, enemy)
+
+
+
+
+
+#json test 
+print(create_stuff.y["damage"])

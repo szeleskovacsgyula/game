@@ -1,6 +1,5 @@
 class Equipment:
-    def __init__(index, self, name, price):
-        self.index = index
+    def __init__(self, name, price):
         self.name = name
         self.price = price
         pcs = 0
@@ -13,10 +12,10 @@ class useableEquipment(Equipment):
         pcs = 0
 
 class DefEquipment(useableEquipment):
-    def __init__(self, name, price, armor):
+    def __init__(self, name, armor):
         self.name = name
-        self.price = price
         self.armor = armor
+        price = 0
         equipped = False
         pcs = 0
     
@@ -24,10 +23,10 @@ class DefEquipment(useableEquipment):
         return f"Name: {self.name}\nArmor: {self.armor}"
 
 class AtkEquipment(useableEquipment):
-    def __init__(self, name, price, atkDmg):
+    def __init__(self, name, atkDmg):
         self.name = name
-        self.price = price
         self.atkDmg = atkDmg
+        price = 0
         equipped = False
         pcs = 0
 
