@@ -21,9 +21,9 @@ player.info()
 #fight test I
 #create_stuff.Fight(player, enemy)
 
+create_stuff.placeInfo(player.location)
 
-
-
+print(player.location)
 
 #json test 
-print(create_stuff.y["damage"])
+#print(create_stuff.d["damage"])

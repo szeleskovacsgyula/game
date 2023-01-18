@@ -5,6 +5,7 @@ import classes
 import characters
 import time
 import json
+import sys
 
 #equipment -- átírni tömbbe, index alapján vissza?
 shield = equipment.DefEquipment("Shield", 10)
@@ -81,7 +82,7 @@ def Fight(fighter1, fighter2): #befejezni
         elif command == "varázsolni" or command == "2" :
             print("még nem lehet :(")
         elif command == "szaladni" or command == "3" :
-            print() # befejezni
+            print("még nem lehet :(") # befejezni
         else :
             print("ilyet nem lehet")
 
@@ -109,3 +110,32 @@ def calculateDamage(damageDealer) : #beilleszteni a deal damage-be ha meglesz a 
 #--------------------------------------------------------------------------------------------------------------------
 #Equipment -- fájlból beolvasás tömbbe
 #json v jegyzettömb?
+
+
+
+
+#--------------------------------------------------------------------------------------------------------------------
+#Travel
+def travel():
+    player.location = destination
+        
+def placeInfo(placeImAt) :
+    if placeImAt == "FALU" :
+        print("A faluban vagy. Íme a lehetőségeid:\n1. Utazás\n2. Élet töltés\n3. Kilépés\nVálasztásod: ")
+        choice = input()
+        #return choice
+        if choice == "1":
+            print("Utazol az erdőbe...")
+            player.location = "ERDŐ"
+        elif choice == "2":
+            player.currentHP = player.maxHP
+        elif choice == "3":
+            sys.exit("Kiléptél")
+        else :
+            print("Nem lehetséges választás")
+    elif placeImAt == "ERDŐ" :
+        print()
+        return input("Az erdőben vagy. Íme a lehetőségeid: \n1. Utazás\n2. Harc\n3. Kilépés\nVálasztásod: ")
+
+    else :
+        sys.exit("valamit nagyon elbasztál...")

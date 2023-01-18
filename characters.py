@@ -28,7 +28,7 @@ class Player(Alive) :
     #bonus dmg kiírás???
     armor = 0
     items = []
-    location = ""
+    location = "FALU"
     equipment=[] #max 5, max 1 atk <-- erre kitalálni valamit!!!
     #távolság később, ha a mage és archer bekerül
 
