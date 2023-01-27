@@ -15,6 +15,8 @@ nowsword = equipment.AtkEquipment("notSword", 10)
 warrior = classes.Warrior()
 mage = classes.Mage()
 archer = classes.Archer()
+healer = classes.Healer()
+tank = classes.Tank()
 allEquipment = []
 
 #dictionary próba
@@ -55,12 +57,14 @@ def addClass(player):
         player.damage+= warrior.bonusAtk
         player.armor+= warrior.bonusArmor
         player.maxHP+= warrior.bonusHp
+        player.maxMana += warrior.bonusMana
         player.currentHP = player.maxHP
         #characters.bonusAttack+=10
         player.clas = classes.Warrior()
     elif player.clas == "MAGE" :
         player.damage += mage.bonusAtk
         player.armor += mage.bonusArmor
+        player.maxHP += mage.bonusHp
         player.maxMana += mage.bonusMana
         player.currentHP = player.maxHP
         player.clas = classes.Mage()
@@ -68,8 +72,24 @@ def addClass(player):
         player.damage += archer.bonusAtk
         player.armor += archer.bonusArmor
         player.maxHP += archer.bonusHP
+        player.maxMana += archer.bonusMana
         player.currentHP = player.maxHP
         player.clas = classes.Archer()
+    elif player.clas == "HEALER":
+        player.damage += healer.bonusAtk
+        player.armor += healer.bonusArmor
+        player.maxHP += healer.bonusHP
+        player.maxMana += healer.bonusMana
+        player.currentHP = player.maxHP
+        player.clas = classes.Healer()
+    elif player.clas == "TANK":
+        player.damage += tank.bonusAtk
+        player.armor += tank.bonusArmor
+        player.maxHP += tank.bonusHP
+        player.maxmana += tank.bonusMana
+        player.currentHP = player.maxHP
+        player.clas = classes.Tank()
+
     else :
         print("Hagyjál majd csinálok még")
 
@@ -136,6 +156,9 @@ def placeInfo(placeImAt) :
     elif placeImAt == "ERDŐ" :
         print()
         return input("Az erdőben vagy. Íme a lehetőségeid: \n1. Utazás\n2. Harc\n3. Kilépés\nVálasztásod: ")
+    elif placeImAt == "KASTÉLY":
+        print()
+        return input("Lusta vagyok most ide irni vmit!")
 
     else :
         sys.exit("valamit nagyon elbasztál...")
